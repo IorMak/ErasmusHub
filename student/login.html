@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>ErasmusHub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    #logo {
+      max-width: 400px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #b60505be;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #b60505be;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="
+  https://drive.google.com/thumbnail?id=1RvyWxIWtCxNmJghIUkOjznQPUyz86cGO&sz=w800" alt="Logo ΟΠΑ" id="logo">
+
+  <form method="post" action="/?_task=login">
+    <label for="username">Όνομα Χρήστη</label>
+    <input type="text" id="username" name="_user" required placeholder="π.χ. p1234567@aueb.gr">
+
+    <label for="password">Κωδικός Πρόσβασης</label>
+    <input type="password" id="password" name="_pass" required>
+
+    <button type="submit">Σύνδεση</button>
+  </form>
+
+</body>
+</html>
