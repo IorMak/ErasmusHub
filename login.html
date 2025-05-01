@@ -63,9 +63,9 @@
 
   <img src="Assets/AUEB-logo.jpg" alt="Logo ΟΠΑ" id="logo">
 
-  <form method="post" action="/?_task=login">
+  <form onsubmit="handleLogin(event)">
     <label for="username">Όνομα Χρήστη</label>
-    <input type="text" id="username" name="_user" required placeholder="π.χ. p1234567@aueb.gr">
+    <input type="text" id="username" name="_user" required placeholder="Φ για φοιτητής ή ΑΥ για ακαδημαικός υπεύθυνος">
 
     <label for="password">Κωδικός Πρόσβασης</label>
     <input type="password" id="password" name="_pass" required>
@@ -77,14 +77,15 @@
     function handleLogin(event) {
       event.preventDefault(); // σταματάει την κανονική υποβολή
 
-      const username = document.getElementById("username").value.trim().toLowerCase();
+      const username = document.getElementById("username").value.trim();
+      
 
-      if (username === "φοιτητης") {
+      if (username === "Φ") {
         window.location.href = "Student/homepagestudent.html";
-      } else if (username === "ακαδημαικος συντονιστης") {
+      } else if (username === "ΑΥ") {
         window.location.href = "Cordinator/homepage.html";
       } else {
-        alert("Μη έγκυρο όνομα χρήστη. Δοκίμασε φοιτητης ή ακαδημαικος συντονιστης.");
+        alert("Μη έγκυρο όνομα χρήστη. Δοκίμασε Φ ή ΑΥ(στα ελληνικά)");
       }
     }
   </script>
