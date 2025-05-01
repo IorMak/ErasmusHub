@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>ErasmusHub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #e6e2d4;
+    }
+
+    h1 {
+      margin: 0;
+      color: #941717;
+    }
+
+    .primary {
+      background-color: #941717;
+      color: white;
+      padding: 20px 32px;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .small-circle-button {
+      width: 25px;
+      height: 25px;
+      background-color: #941717;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 14px;
+      text-align: center;
+      line-height: 25px;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+
+    .secondary {
+      background-color: #941717;
+      color: white;
+      padding: 20px 32px;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      width: 700px;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .upload-button {
+      background: none;
+      color: #941717;
+      padding: 8px 16px;
+      border: 1px solid #941717;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+
+    .button-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .content {
+      display: none;
+      padding: 0 18px;
+      margin-top: 5px;
+      font-size: 15px;
+    }
+
+    footer nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    footer nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+
+    th, td {
+      border: 4px solid #f9f9f9;
+      padding: 12px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>ErasmusHub</h1>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">HomePage</a></li>
+        <li><a href="#">Apply</a></li>
+        <li><a href="#">After Application</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Info</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <div class="button-row">
+    <button class="primary" onclick="toggleContent('preLearning')">Pre-Learning Agreement</button>
+    <button class="small-circle-button" onclick="toggleContent('aboutPreLearning')">i</button>
+    <button class="upload-button" onclick="alert('Ενέργεια για την υποβολή preLearning Agreement')">Υποβολή Αρχείου</button>
+  </div>
+
+  <div class="button-row">
+    <button class="secondary" onclick="toggleContent('applicationDoc')">Έγγραφο Αίτησης</button>
+    <button class="upload-button" onclick="alert('Συμπληρωματική ενέργεια για την υποβολή αίτησης')">Υποβολή Αρχείου</button>
+  </div>
+  <div id="applicationDoc" class="content"></div><br>
+
+  <div class="button-row">
+    <button class="secondary" onclick="toggleContent('identity')">Ταυτότητα</button>
+    <button class="upload-button" onclick="alert('Ενέργεια για την υποβολή της ταυτότητας')">Υποβολή Αρχείου</button>
+  </div>
+  <div id="identity" class="content"></div><br>
+
+</body>
+</html>
