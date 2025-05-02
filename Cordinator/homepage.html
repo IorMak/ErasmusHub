@@ -4,33 +4,38 @@
   <meta charset="UTF-8">
   <title>ErasmusHub</title>
   <style>
-    body {
+      body {
       font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #e6e2d4;
-    }
-
-    h1 {
+      background-color: #e6e2d4; 
       margin: 0;
-      color: #941717;
-    }
-
-    footer nav ul {
-      list-style: none;
       padding: 0;
+      }
+
+      header {
+      background-color: #941717; 
+      color: white;
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    footer nav a {
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+     }
+     header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+     }
+     header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+     }
+     header nav a {
+      color: white;
       text-decoration: none;
-      color: #333;
       font-weight: bold;
-    }
-
-    button {
+     }
+     button {
       background-color: #941717;
       color: white;
       padding: 15px 20px;
@@ -41,12 +46,10 @@
       width: 800px;
       text-align: left;
       border-radius: 20px;
-    }
-
+     }
     button:hover {
       background-color: #7c1212;
     }
-
     .content {
       display: none;
       padding: 0 18px;
@@ -56,20 +59,17 @@
   </style>
 </head>
 <body>
-
+  <header>
   <h1>ErasmusHub</h1>
-  <h2>Καλώς ήρθες υπεύθυνε!</h2>
-  
-  <footer>
     <nav>
       <ul>
         <li><a href="#">HomePage</a></li>
-        <li><a href="#">Applications</a></li>
+        <li><a href="application.html">Applications</a></li>
         <li><a href="#">OutgoingStudents</a></li>
         <li><a href="#">Notifications</a></li>
       </ul>
     </nav>
-  </footer>
+  </header>
 
 </body>
 </html>

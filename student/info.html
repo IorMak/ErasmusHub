@@ -6,15 +6,39 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #e6e2d4;
-    }
-  
-    h1 {
+      background-color: #e6e2d4; 
       margin: 0;
-      color:#941717;
+      padding: 0;
     }
 
+    header {
+      background-color: #941717; 
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
     button {
       background-color: #941717;
       color: white;
@@ -27,27 +51,11 @@
       text-align: left; /* κείμενο αριστερά */
       border-radius: 20px; /* στρογγυλές γωνίες */
     }
-
     .content {
       display: none;
       padding: 0 18px;
       margin-top: 5px;
       font-size:15px;
-    }
-
-    footer nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 50px;
-    }
-
-    footer nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
     }
     table {
     width: 100%;
@@ -61,26 +69,23 @@
   }
   tr:nth-child(even) {
     background-color: #f9f9f9;
-  }
-
-  
+  }  
   </style>
 </head>
+
 <body>
-
-  <h1>ErasmusHub</h1>
-
-  <footer>
+  <header>
+   <h1>ErasmusHub</h1>
     <nav>
       <ul>
         <li><a href="homepagestudent.html">HomePage</a></li>
-        <li><a href="#">Apply</a></li>
-        <li><a href="#">After Application</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="after-application.html">After Application</a></li>
         <li><a href="#">Notifications</a></li>
         <li><a href="#">Info</a></li>
       </ul>
     </nav>
-  </footer>
+  </header>
 
   <button onclick="toggleContent('faq')">Frequently asked questions</button>
   <div id="faq" class="content">
