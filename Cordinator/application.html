@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>After Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6e2d4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #941717;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .student {
+      background: white;
+      border-radius: 10px;
+      width: 80%;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+    }
+
+    .student:hover {
+      background-color: #f9f5ef;
+    }
+
+    .student h3 {
+      margin: 0;
+    }
+
+    .buttons {
+      display: none;
+      justify-content: flex-start;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+    }
+
+    .buttons button {
+      background-color: #941717;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .student.active .buttons {
+      display: flex;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ErasmusHub</h1>
+    <nav>
+      <ul>
+        <li><a href="homepageStudent.html">HomePage</a></li>
+        <li><a href="#">Applications</a></li>
+        <li><a href="#">OutgoingStudents</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="steps-container">
+    <!-- Παράδειγμα φοιτητών -->
+    <div class="student" onclick="toggleButtons(this)">
+      <h3>Όνομα Φοιτητή</h3>
+      <div class="buttons">
+        <a href="documents/giannis_prelearning.pdf" download><button>Prelearning Agreement</button></a>
+        <a href="documents/giannis_application.pdf" download><button>Application</button></a>
+        <a href="documents/giannis_idcard.pdf" download><button>ID Card</button></a>
+      </div>
+    </div>
+
+    <div class="student" onclick="toggleButtons(this)">
+      <h3>Όνομα Φοιτητή</h3>
+      <div class="buttons">
+        <a href="documents/maria_prelearning.pdf" download><button>Prelearning Agreement</button></a>
+        <a href="documents/maria_application.pdf" download><button>Application</button></a>
+        <a href="documents/maria_idcard.pdf" download><button>ID Card</button></a>
+      </div>
+    </div>
+
+    <div class="student" onclick="toggleButtons(this)">
+      <h3>Όνομα Φοιτητή</h3>
+      <div class="buttons">
+        <a href="documents/alexis_prelearning.pdf" download><button>Prelearning Agreement</button></a>
+        <a href="documents/alexis_application.pdf" download><button>Application</button></a>
+        <a href="documents/alexis_idcard.pdf" download><button>ID Card</button></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleButtons(element) {
+      const allStudents = document.querySelectorAll('.student');
+      allStudents.forEach(student => {
+        if (student !== element) {
+          student.classList.remove('active');
+        }
+      });
+      element.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
