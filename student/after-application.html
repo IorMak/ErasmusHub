@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>After Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6e2d4; /* Μπεζ φόντο */
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #941717; /* Μπορντό */
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 10px;
+      width: 80%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .step-card h2 {
+      margin: 0;
+    }
+
+    .step-card button {
+      background-color: #941717;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>ErasmusHub</h1>
+    <nav>
+      <ul>
+        <li><a href="homepageStudent.html">HomePage</a></li>
+        <li><a href="#">Apply</a></li>
+        <li><a href="#">After Application</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Info</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="steps-container">
+    <div class="step-card">
+      <h2>Learning Agreement</h2>
+      <button>Υποβολή</button>
+    </div>
+
+    <div class="step-card">
+      <h2>Application</h2>
+      <button>Υποβολή</button>
+    </div>
+
+    <div class="step-card">
+      <h2>During the Mobility</h2>
+      <button>Υποβολή</button>
+    </div>
+
+    <div class="step-card">
+      <h2>Transcript of Records</h2>
+      <button>Υποβολή</button>
+    </div>
+  </main>
+</body>
+</html>
