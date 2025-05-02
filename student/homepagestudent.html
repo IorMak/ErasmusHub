@@ -6,30 +6,111 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #e6e2d4;
-    }
-
-    h1 {
+      background-color: #e6e2d4; 
       margin: 0;
-      color: #941717;
-    }
-
-    footer nav ul {
-      list-style: none;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
     }
-
-    footer nav a {
+    header {
+      background-color: #941717; 
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    header nav a {
+      color: white;
       text-decoration: none;
-      color: #333;
       font-weight: bold;
     }
-
+    
+    h2 {
+      background-color: #941717;
+      color: white;
+      padding: 10px;
+      border-radius: 18px;
+      display: inline-block;
+      font-weight: normal;
+    }
+    .row {
+     display: flex;
+     margin-bottom: 50px;
+     align-items: flex-start;
+     }
+     .right-column {
+     margin-top: 40px;
+     }
+    .left-column, .right-column {
+     flex: 1;
+     }
+    .left-column .section {
+     margin-bottom: 30px;
+     } 
+     section {
+      margin-bottom: 30px; 
+    }
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+    .calendar {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1;
+    width: 525px;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 70px);
+      gap: 5px;
+    }
+    .day {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .day-name{
+      padding: 10px;
+      border: 2px solid #941717;
+    }
+    .day-name {
+      background-color: white;
+      font-size: 13px;
+    }
+    .day:hover {
+      background-color: #941717;
+      color: white;
+    }
+    .empty {
+      border: none;
+      background: transparent;
+    
+    }
+    .announcements {
+     flex: 1;
+    }
+    .section-title {
+      margin-top: 30px;
+    }
+    .right-column h2 {
+    text-align: right;
+    display: block;
+    width: 20%;
+    margin: 0 auto 20px auto;
+    }
     button {
       background-color: #941717;
       color: white;
@@ -42,11 +123,9 @@
       text-align: left;
       border-radius: 20px;
     }
-
     button:hover {
-      background-color: #7c1212;
+      background-color: #941717;
     }
-
     .content {
       display: none;
       padding: 0 18px;
@@ -56,21 +135,88 @@
   </style>
 </head>
 <body>
-
-  <h1>ErasmusHub</h1>
-  <h2>Καλώς ήρθες φοιτητή!</h2>
-
-  <footer>
+  <header>
+   <h1>ErasmusHub</h1>
     <nav>
       <ul>
         <li><a href="#">HomePage</a></li>
-        <li><a href="#">Apply</a></li>
-        <li><a href="#">After Application</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="after-application.html">After Application</a></li>
         <li><a href="#">Notifications</a></li>
         <li><a href="info.html">Info</a></li>
       </ul>
     </nav>
-  </footer>
+  </header>
+
+   <div class="row">
+    <div class="left-column">
+      <div class="section">
+        <h2>Πορεία Αίτησης</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" checked>do pla</li>
+          <li><input type="checkbox">get approve by coordinator</li>
+          <li><input type="checkbox">apply</li>
+        </ul>
+      </div> 
+      <div class="section">
+        <h2>Ανακοινώσεις</h2>
+        <p>📌 Λήξη αιτήσεων: 7 Μαΐου</p>
+      </div>
+    </div>
+    <div class="right-column">
+      <h2>Ημερολόγιο</h2>
+      <div class="calendar">
+        <h3 id="month-year"></h3>
+        <div class="calendar-grid" id="calendar-grid"></div>
+      </div>
+    </div>
+   </div>
+
+   <script>
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"];
+    const dayNames = ["S", "M", "T", "W", "T", "F", "S"];
+
+  
+    function createCalendar(month, year) {
+      const monthYear = document.getElementById("month-year");
+      monthYear.textContent = `${monthNames[month]} ${year}`;
+  
+      const grid = document.getElementById("calendar-grid");
+      grid.innerHTML = "";
+  
+      // Day-names
+      for (let i = 0; i < 7; i++) {
+        const dayName = document.createElement("div");
+        dayName.textContent = dayNames[i];
+        dayName.className = "day-name";
+        grid.appendChild(dayName);
+      }
+  
+      // Days
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+  
+      // Empty boxes before the first of the month
+      for (let i = 0; i < firstDay; i++) {
+        const empty = document.createElement("div");
+        empty.className = "day empty";
+        grid.appendChild(empty);
+      }
+  
+      // Fill days
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dayCell = document.createElement("div");
+        dayCell.className = "day";
+        dayCell.textContent = day;
+        grid.appendChild(dayCell);
+      }
+    }
+  
+    // Caldendar for current month
+    const today = new Date();
+    createCalendar(today.getMonth(), today.getFullYear());
+   </script>
 
 </body>
 </html>
