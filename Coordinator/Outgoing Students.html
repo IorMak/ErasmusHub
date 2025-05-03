@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>ErasmusHub - Outgoing Students</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6e2d4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #941717;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .student-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .student-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .student-header input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .buttons-container button {
+      background-color: #941717;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .search-bar {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>ErasmusHub</h1>
+    <nav>
+      <ul style="list-style:none; display:flex; gap:1rem; margin:0; padding:0;">
+        <li><a href="../Coordinator/homepageStudent.html" style="color:white; text-decoration:none; font-weight:bold;">HomePage</a></li>
+        <li><a href="../Coordinator/applications.html" style="color:white; text-decoration:none; font-weight:bold;">Applications</a></li>
+        <li><a href="../Coordinator/outgoing-students.html" style="color:white; text-decoration:none; font-weight:bold;">Outgoing Students</a></li>
+        <li><a href="../Coordinator/notifications.html" style="color:white; text-decoration:none; font-weight:bold;">Notifications</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <input class="search-bar" type="text" placeholder="Αναζήτηση φοιτητή...">
+
+    <div class="student-card">
+      <div class="student-header">
+        <input type="checkbox">
+        <strong>Όνομα Φοιτητή 1</strong>
+      </div>
+
+      <div class="buttons-container">
+        <button>Learning Agreement</button>
+        <button>Application</button>
+        <button>During Mobility</button>
+        <button>Λήψη Σύμβασης</button>
+        <button>Εκχώρηση Σύβασης</button>
+        <button>Transcript of Records</button>
+        <button>Εκχώρηση Tran Record</button>
+      </div>
+    </div>
+
+    <div class="student-card">
+      <div class="student-header">
+        <input type="checkbox">
+        <strong>Όνομα Φοιτητή 2</strong>
+      </div>
+
+      <div class="buttons-container">
+        <button>Learning Agreement</button>
+        <button>Application</button>
+        <button>During Mobility</button>
+        <button>Λήψη Σύμβασης </button>
+        <button>Εκχώρηση Σύβασης</button>
+        <button>Transcript of Records</button>
+        <button>Εκχώρηση Tran Record</button>
+      </div>
+    </div>
+
+    <div class="student-card">
+        <div class="student-header">
+          <input type="checkbox">
+          <strong>Όνομα Φοιτητή 3</strong>
+        </div>
+  
+        <div class="buttons-container">
+          <button>Learning Agreement</button>
+          <button>Application</button>
+          <button>During Mobility</button>
+          <button>Λήψη Σύμβασης </button>
+          <button>Εκχώρηση Σύβασης</button>
+          <button>Transcript of Records</button>
+          <button>Εκχώρηση Tran Record</button>
+        </div>
+      </div>
+
+  </main>
+</body>
+</html>
