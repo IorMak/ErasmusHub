@@ -21,40 +21,60 @@
     }
 
     header h1 {
-      margin: 0;
       font-size: 1.8rem;
+      margin: 0;
     }
 
-    main {
-      padding: 2rem;
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
 
-    .student-card {
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .student {
       background: white;
       border-radius: 10px;
-      padding: 1rem;
-      margin-bottom: 1rem;
+      width: 80%;
+      padding: 1rem 2rem;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+      transition: background-color 0.3s;
     }
 
-    .student-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
+    .student:hover {
+      background-color: #f9f5ef;
     }
 
-    .student-header input[type="checkbox"] {
-      transform: scale(1.2);
+    .student h3 {
+      margin: 0;
     }
 
-    .buttons-container {
-      display: flex;
+    .buttons {
+      display: none;
       flex-wrap: wrap;
       gap: 0.5rem;
+      margin-top: 1rem;
+      padding-left: 1rem;
     }
 
-    .buttons-container button {
+    .buttons button {
       background-color: #941717;
       color: white;
       border: none;
@@ -64,14 +84,19 @@
       font-size: 0.9rem;
     }
 
+    .student.active .buttons {
+      display: flex;
+    }
+
     .search-bar {
-      width: 100%;
+      width: 80%;
       max-width: 400px;
       padding: 0.5rem;
-      margin-bottom: 1rem;
+      margin: 1rem auto;
       font-size: 1rem;
       border-radius: 5px;
       border: 1px solid #ccc;
+      display: block;
     }
   </style>
 </head>
@@ -80,69 +105,69 @@
   <header>
     <h1>ErasmusHub</h1>
     <nav>
-      <ul style="list-style:none; display:flex; gap:1rem; margin:0; padding:0;">
-        <li><a href="homepage.html" style="color:white; text-decoration:none; font-weight:bold;">HomePage</a></li>
-        <li><a href="application.html" style="color:white; text-decoration:none; font-weight:bold;">Applications</a></li>
-        <li><a href="Outgoing Students.html" style="color:white; text-decoration:none; font-weight:bold;">Outgoing Students</a></li>
-        <li><a href="notifications2.html" style="color:white; text-decoration:none; font-weight:bold;">Notifications</a></li>
+      <ul>
+        <li><a href="homepage.html">HomePage</a></li>
+        <li><a href="application.html">Applications</a></li>
+        <li><a href="Outgoing Students.html">Outgoing Students</a></li>
+        <li><a href="notifications2.html">Notifications</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <input class="search-bar" type="text" placeholder="Αναζήτηση φοιτητή...">
+  <input class="search-bar" type="text" placeholder="Αναζήτηση φοιτητή...">
 
-    <div class="student-card">
-      <div class="student-header">
-        <input type="checkbox">
-        <strong>Όνομα Φοιτητή 1</strong>
-      </div>
-
-      <div class="buttons-container">
+  <div class="steps-container">
+    <div class="student" onclick="toggleButtons(this)">
+      <h3>Όνομα Φοιτητή </h3>
+      <div class="buttons">
         <button>Learning Agreement</button>
         <button>Application</button>
         <button>During Mobility</button>
         <button>Λήψη Σύμβασης</button>
-        <button>Εκχώρηση Σύβασης</button>
+        <button>Εκχώρηση Σύμβασης</button>
         <button>Transcript of Records</button>
         <button>Εκχώρηση Tran Record</button>
       </div>
     </div>
 
-    <div class="student-card">
-      <div class="student-header">
-        <input type="checkbox">
-        <strong>Όνομα Φοιτητή 2</strong>
-      </div>
-
-      <div class="buttons-container">
+    <div class="student" onclick="toggleButtons(this)">
+      <h3>Όνομα Φοιτητή</h3>
+      <div class="buttons">
         <button>Learning Agreement</button>
         <button>Application</button>
         <button>During Mobility</button>
-        <button>Λήψη Σύμβασης </button>
-        <button>Εκχώρηση Σύβασης</button>
+        <button>Λήψη Σύμβασης</button>
+        <button>Εκχώρηση Σύμβασης</button>
         <button>Transcript of Records</button>
         <button>Εκχώρηση Tran Record</button>
       </div>
     </div>
 
-    <div class="student-card">
-        <div class="student-header">
-          <input type="checkbox">
-          <strong>Όνομα Φοιτητή 3</strong>
-        </div>
-  
-        <div class="buttons-container">
-          <button>Learning Agreement</button>
-          <button>Application</button>
-          <button>During Mobility</button>
-          <button>Λήψη Σύμβασης </button>
-          <button>Εκχώρηση Σύβασης</button>
-          <button>Transcript of Records</button>
-          <button>Εκχώρηση Tran Record</button>
-        </div>
+    <div class="student" onclick="toggleButtons(this)">
+      <h3>Όνομα Φοιτητή</h3>
+      <div class="buttons">
+        <button>Learning Agreement</button>
+        <button>Application</button>
+        <button>During Mobility</button>
+        <button>Λήψη Σύμβασης</button>
+        <button>Εκχώρηση Σύμβασης</button>
+        <button>Transcript of Records</button>
+        <button>Εκχώρηση Tran Record</button>
       </div>
+    </div>
+  </div>
 
-  </main>
+  <script>
+    function toggleButtons(element) {
+      const allStudents = document.querySelectorAll('.student');
+      allStudents.forEach(student => {
+        if (student !== element) {
+          student.classList.remove('active');
+        }
+      });
+      element.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
+
