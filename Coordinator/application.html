@@ -39,6 +39,17 @@
       font-weight: bold;
     }
 
+    .search-bar {
+      width: 80%;
+      max-width: 400px;
+      padding: 0.5rem;
+      margin: 1rem auto;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      display: block;
+    }
+
     .steps-container {
       display: flex;
       flex-direction: column;
@@ -102,8 +113,10 @@
     </nav>
   </header>
 
+  <!-- ✅ Αναζήτηση -->
+  <input class="search-bar" type="text" placeholder="Αναζήτηση φοιτητή...">
+
   <div class="steps-container">
-    <!-- Παράδειγμα φοιτητών -->
     <div class="student" onclick="toggleButtons(this)">
       <h3>Όνομα Φοιτητή</h3>
       <div class="buttons">
